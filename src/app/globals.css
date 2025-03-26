@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 25% 95%;
+    --foreground: 207 33% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 207 33% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 33% 13%;
+
+    --primary: 181 52% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 58% 19%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 194 60% 70%;
+    --accent-foreground: 207 33% 13%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 181 52% 51%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 207 33% 13%;
+    --foreground: 210 40% 98%;
+
+    --card: 207 33% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 207 33% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 181 52% 51%;
+    --primary-foreground: 207 33% 13%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 181 52% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom gradient for header */
+.gradient-header {
+  background: linear-gradient(90deg, #43b6be 0%, #1a75b5 100%);
+}
+
+/* Common styles */
+.content-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Service card styles */
+.service-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300;
+}
+
+.service-card:hover {
+  @apply shadow-lg transform -translate-y-1;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary hover:bg-primary/90 text-white rounded-md px-4 py-2;
+}
+
+.btn-secondary {
+  @apply bg-secondary hover:bg-secondary/90 text-white rounded-md px-4 py-2;
+}
